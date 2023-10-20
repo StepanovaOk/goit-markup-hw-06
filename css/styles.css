@@ -20,16 +20,19 @@ a {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 .container {
-  max-width: 1158px;
+  max-width: 320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 16px;
 }
 
 /*header*/
 
 .header {
+  padding: 16px 0;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -37,10 +40,8 @@ img {
 }
 .header-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  height: 72px;
-  width: 320px;
 }
 .header-nav {
   display: flex;
@@ -55,8 +56,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  position: absolute;
-  left: 16px;
 }
 .logo {
   color: #2e2f42;
@@ -100,7 +99,6 @@ img {
 }
 .address {
   font-style: normal;
-  margin-left: auto;
   align-items: center;
   display: none;
 }
@@ -134,8 +132,6 @@ img {
 .mob-menu-btn {
   border: none;
   padding: 0;
-  position: absolute;
-  right: 16px;
   cursor: pointer;
 }
 
@@ -175,7 +171,7 @@ img {
   height: 100vh;
   background-color: #ffffff;
   z-index: 1;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 24px 40px 16px;
 }
 
 .mob-btn-close {
@@ -185,10 +181,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-bottom: 24px;
   border-radius: 50%;
   border-color: #e7e9fc;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
 .mob-btn-icon {
@@ -272,7 +269,6 @@ img {
 /*section1*/
 
 .title-section {
-  max-width: 320px;
   margin: auto;
   background-color: #2e2f42;
   padding: 72px 0;
@@ -391,6 +387,7 @@ img {
   letter-spacing: 0.02em;
   margin-top: 0;
   margin-bottom: 8px;
+  text-align: center;
 }
 .solutions-text {
   color: #434455;
@@ -405,7 +402,7 @@ img {
 
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .team-container {
 }
@@ -429,7 +426,6 @@ img {
   align-items: center;
   flex-wrap: wrap;
   gap: 72px;
-  margin: 96px auto;
 }
 
 .team-list-item {
@@ -506,7 +502,7 @@ img {
 /*section3 portfolio*/
 
 .portfolio-section {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 .portfolio-container {
@@ -533,7 +529,6 @@ img {
 }
 
 .portfolio-list-item {
-  width: 288px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -548,10 +543,6 @@ img {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  min-width: 256px;
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-names {
@@ -625,7 +616,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   display: block;
-  margin: 16px auto;
+  margin: 0 auto 16px;
   width: 116px;
 }
 
@@ -1008,16 +999,25 @@ img {
 @media screen and (min-width: 768px) {
   /*---header----*/
 
-  .header-container {
-    width: 768px;
+  /* .header-container {
+    justify-content: center;
+  } */
+
+  .container {
+    max-width: 768px;
+  }
+
+  .header {
+    padding: 0;
   }
 
   .mob-menu-btn {
-    visibility: hidden;
+    display: none;
   }
 
   .nav-list {
     display: flex;
+    margin-right: 121px;
   }
 
   .header-logo {
@@ -1026,8 +1026,6 @@ img {
 
   .address {
     display: flex;
-    position: absolute;
-    right: 16px;
   }
 
   .address-list {
@@ -1040,7 +1038,6 @@ img {
 
   .title-section {
     padding: 112px 0;
-    max-width: 768px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1115,7 +1112,6 @@ img {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin: 0 auto;
     gap: 24px;
     max-width: 496px;
   }
@@ -1165,9 +1161,13 @@ img {
 @media screen and (min-width: 1158px) {
   /*---header----*/
 
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
   .header-container {
     justify-content: center;
-    width: 1158px;
   }
 
   .header-logo {
@@ -1184,7 +1184,6 @@ img {
 
   .title-section {
     padding: 188px 0;
-    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -1243,6 +1242,10 @@ img {
 
   /*---S3adapt----*/
 
+  .team {
+    padding: 120px 0;
+  }
+
   .team-list {
     width: 1128px;
     gap: 24px;
@@ -1254,6 +1257,10 @@ img {
   }
 
   /*---S4adapt----*/
+
+  .portfolio-section {
+    padding: 120px 0;
+  }
 
   .portfolio-list-menu {
     gap: 24px;
