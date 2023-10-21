@@ -85,7 +85,7 @@ img {
   color: #404bbf;
 }
 
-.nav-list-item::after {
+.nav-list-item.current::after {
   color: #404bbf;
   content: "";
   position: absolute;
@@ -182,15 +182,14 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border-color: #e7e9fc;
+  border: 1px solid #e7e9fc;
+  background-color: transparent;
   position: absolute;
   top: 24px;
   right: 24px;
 }
 
 .mob-btn-icon {
-  width: 100%;
-  height: 100%;
   fill: #2e2f42;
 }
 
@@ -626,7 +625,7 @@ img {
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
   max-width: 288px;
-  margin: 0 auto 72px;
+  margin-bottom: 72px;
 }
 
 .footer-address-text {
@@ -999,10 +998,6 @@ img {
 @media screen and (min-width: 768px) {
   /*---header----*/
 
-  /* .header-container {
-    justify-content: center;
-  } */
-
   .container {
     max-width: 768px;
   }
@@ -1017,7 +1012,7 @@ img {
 
   .nav-list {
     display: flex;
-    margin-right: 121px;
+    /* margin-right: auto; */
   }
 
   .header-logo {
@@ -1068,6 +1063,9 @@ img {
 
   .solutions-list {
     width: calc((100% - 24px) / 2);
+  }
+
+  .solutions-list:nth-last-child(n + 3) {
     margin-bottom: 72px;
   }
 
@@ -1084,7 +1082,7 @@ img {
     flex-direction: row;
     width: 552px;
     gap: 24px;
-    margin: 96px auto;
+    margin: 0 auto;
   }
 
   .team-list-item {
@@ -1108,13 +1106,21 @@ img {
 
   /*---Footer----*/
 
+  .footer-container {
+    align-items: flex-start;
+    margin-left: 108px;
+  }
+
   .footer-first-half {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    margin: 0 auto;
     gap: 24px;
     max-width: 496px;
+  }
+
+  .footer-subscribe-container {
+    margin: 72px 0 0;
   }
 
   .footer-logo {
@@ -1123,6 +1129,10 @@ img {
 
   .footer-address-text {
     text-align: start;
+  }
+
+  .footer-text {
+    margin: 0;
   }
 
   .footer-form {
@@ -1165,10 +1175,6 @@ img {
   .container {
     max-width: 1158px;
     padding: 0 15px;
-  }
-
-  .header-container {
-    justify-content: center;
   }
 
   .header-logo {
@@ -1218,6 +1224,10 @@ img {
     width: calc((100% - 72px) / 4);
   }
 
+  .solutions-list:nth-last-child(n + 3) {
+    margin-bottom: 0;
+  }
+
   .solutions-list-menu {
     flex-direction: row;
     justify-content: center;
@@ -1250,7 +1260,6 @@ img {
   .team-list {
     width: 1128px;
     gap: 24px;
-    margin: 120px auto;
   }
 
   .team-list-item {
@@ -1276,6 +1285,7 @@ img {
   /*---Footer----*/
 
   .footer-container {
+    margin-left: 0;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
