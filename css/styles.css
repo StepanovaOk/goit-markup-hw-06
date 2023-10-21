@@ -1285,7 +1285,7 @@ img {
   /*---Footer----*/
 
   .footer-container {
-    margin-left: 0;
+    margin-left: auto;
     flex-direction: row;
     align-items: baseline;
     justify-content: center;
